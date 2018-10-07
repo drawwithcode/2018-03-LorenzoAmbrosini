@@ -12,12 +12,15 @@ function setup() {
 
 function carattere() {
   background(0, 0, 0, 30);
-  fill(0, 255, 90);
+
 
   var y;
   var list;
   var b;
   var a;
+
+  var m;
+  var n;
 
   y = frameCount * 20;
 
@@ -25,6 +28,9 @@ function carattere() {
   if (y >= windowHeight) {
     frameCount = 0;
     for (p = 0; p < windowWidth; p += sizeCarattere) {
+      m = random(0, 150);
+      n = random(90, 150);
+      fill(m, 255, n);
       list = [0, 1, "a", "b", "c", "x", "y", "z"];
       b = round(random(0, 7));
       a = list[b];
@@ -33,6 +39,9 @@ function carattere() {
     }
   } else {
     for (p = 0; p < windowWidth; p += sizeCarattere) {
+      m = random(0, 10);
+      n = random(90, 180);
+      fill(m, 255, n);
       list = [0, 1, "a", "b", "c", "x", "y", "z"];
       b = round(random(0, 7));
       a = list[b];
